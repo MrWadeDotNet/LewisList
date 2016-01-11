@@ -1,0 +1,58 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/bootswatch/sandstone/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/Font-Awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+   
+
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="navbar navbar-fixed-bottom footer">
+            <ul class="navbar navbar-nav">
+                 <li>&copy; 2016 Lewis's List</li>
+            </ul>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", }))
+            {
+            <ul class="navbar-right footer-auth">     
+                
+                <li>Logged in as @if (Request.IsAuthenticated)
+                {
+                  @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "no-text-decor" })
+                }
+                </li>
+            </ul>
+            <ul class="navbar-right footer-auth">
+                <li>@if (Request.IsAuthenticated)
+                {
+                    <a href="javascript:document.getElementById('logoutForm').submit()" class="no-text-decor">Log off</a>
+                }
+                </li>
+            </ul>
+             }
+           
+        </div>
+    </div>
+</body>
+
+</html>
+
+@RenderSection("scripts", required: false)
+
+
+
+
+
+
+<script src="~/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/wwwroot/lib/respond/dest/respond.min.js"></script>

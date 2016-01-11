@@ -1,0 +1,20 @@
+﻿@model LewisList.ViewModels.PostViewModel
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var c in Model.Categories)
+{
+    <h2>@c.CategoryName</h2>
+}
+
+
+
+   @foreach (var m in Model.Posts)
+   {
+    <div>@m.Author </div>
+    <div>@m.Description</div>
+    <div>@m.Category</div>
+    
+   }
