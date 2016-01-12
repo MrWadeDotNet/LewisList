@@ -22,6 +22,12 @@ namespace LewisList.Models
         [Required]
         public string Description { get; set; }
 
+        [DataType(DataType.Currency)]
+        public string Price { get; set; }
+        [DataType(DataType.PostalCode)]
+        public string PostalCode { get; set; }
+        public string Telephone { get; set; }
+
         //Attempt to write Category value 
         public Post()
         {

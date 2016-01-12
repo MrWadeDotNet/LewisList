@@ -66,6 +66,7 @@ C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Deb
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.Migrations.SeedCat.resources
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.Migrations.AddPending.resources
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.Migrations.ChangedCategoryStringToInt.resources
+C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.Migrations.AddedAdditional.resources
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.csproj.GenerateResource.Cache
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.dll
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.pdb

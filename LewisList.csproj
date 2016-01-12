@@ -191,6 +191,10 @@
     <Compile Include="Migrations\201601112040388_ChangedCategoryStringToInt.Designer.cs">
       <DependentUpon>201601112040388_ChangedCategoryStringToInt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601120031211_AddedAdditional.cs" />
+    <Compile Include="Migrations\201601120031211_AddedAdditional.Designer.cs">
+      <DependentUpon>201601120031211_AddedAdditional.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -1246,6 +1250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601112040388_ChangedCategoryStringToInt.resx">
       <DependentUpon>201601112040388_ChangedCategoryStringToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601120031211_AddedAdditional.resx">
+      <DependentUpon>201601120031211_AddedAdditional.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,5 +1,7 @@
 ﻿using LewisList.Models;
 using LewisList.ViewModels;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,12 +19,13 @@ namespace LewisList.Controllers
         public ActionResult Index(int? Id)
         {          
             PostViewModel vm = new PostViewModel();
-            var numberOfPosts = dbContext.Posts.Count();
-            
+                      
             vm.Posts = dbContext.Posts;
-            
-            ViewBag.DisplayPosts= vm.Posts;
-            
+            // ViewBag.DisplayPosts= vm.Posts;
+            ViewBag.Category = dbContext.Categories;
+
+            vm.Categories = dbContext.Categories.ToList();
+
 
             if (Id != null)
             {
@@ -73,19 +76,14 @@ namespace LewisList.Controllers
         public ActionResult Create(PostViewModel viewModel, int categoryId)
         {
             var username = User.Identity.Name;
-            //    string fullName = "";
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
             int postId = 0;
-            //    string username = "Test";
+            var currentUser = manager.FindById(User.Identity.GetUserId());
+
+            var userTelephone = currentUser.PhoneNumber;
+            var userPostalCode = currentUser.ZipCode;    
+             
             
-
-            //List<Category> categories = new List<Category>();
-
-
-            if (!string.IsNullOrEmpty(username))
-            {
-                var user = dbContext.Users.SingleOrDefault(u => u.UserName == username);
-                //   fullName = string.Concat(new string[] { user.FirstName, " ", user.LastName });
-            }
             Post newPost = new Post();
             if (viewModel.Post.Subject != string.Empty && viewModel.Post.Description != string.Empty)
             {
@@ -93,6 +91,8 @@ namespace LewisList.Controllers
                 newPost.Subject = viewModel.Post.Subject;
                 newPost.Description = viewModel.Post.Description;
                 newPost.Category = categoryId;
+                newPost.PostalCode = userPostalCode;
+                newPost.Telephone = userTelephone;
                 newPost.Author = username;
 
                 dbContext.Posts.Add(newPost);

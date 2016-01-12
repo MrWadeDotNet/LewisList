@@ -12,6 +12,10 @@
 
 </head>
 <body>
+    <div class="navbar navbar-fixed-top">
+        <ul class="navbar text-right">
+        <li>@Html.ActionLink("Make a post", "Create", "Post", htmlAttributes: new { @class = "no-text-decor" })</li></ul>
+    </div>
     <div class="container body-content">
         @RenderBody()
 
@@ -22,7 +26,7 @@
             <ul class="navbar navbar-nav">
                  <li>&copy; 2016 Lewis's List</li>
             </ul>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", }))
-            {
+            {    
             <ul class="navbar-right footer-auth">     
                 
                 <li>Logged in as @if (Request.IsAuthenticated)
@@ -33,8 +37,11 @@
             </ul>
             <ul class="navbar-right footer-auth">
                 <li>@if (Request.IsAuthenticated)
+                {   using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", }))
                 {
+                    @Html.AntiForgeryToken()
                     <a href="javascript:document.getElementById('logoutForm').submit()" class="no-text-decor">Log off</a>
+                    }
                 }
                 </li>
             </ul>

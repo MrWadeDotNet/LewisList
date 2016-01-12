@@ -4,32 +4,101 @@
     ViewBag.Title = "View";
 }
 
+
+
+ 
+        <div class="col-md-2 post-card text-center">
+            <h2>For Sale </h2>
+            @foreach (var c in Model.Categories)
+            {
+                if (c.CategoryMasterName == "For Sale")
+                {
+          
+                        var newUrl = "/View/" + c.CategoryId; 
+
+                        <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
+                                }
+                            }
+        </div>
+    <div class="col-md-2 post-card text-center">
+            <h2>Pets </h2>
+            @foreach (var c in Model.Categories)
+            {
+                if (c.CategoryMasterName == "Pets")
+                {
+
+                    var newUrl = "/View/" + c.CategoryId;
+
+                    <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
+                }
+            }
+    </div>
+    <div class="col-md-2 post-card text-center">
+        <h2>Services </h2>
+        @foreach (var c in Model.Categories)
+                {
+                    if (c.CategoryMasterName == "Services")
+                    {
+
+                        var newUrl = "/View/" + c.CategoryId;
+
+                <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
+            }
+        }
+    </div>
 <div class="col-md-2 post-card text-center">
-    <h3 class="text-center">For Sale</h3>
-    <hr />
-    <div>@Html.ActionLink("Real Estate", "/View/9", "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
+    <h2>Jobs </h2>
+    @foreach (var c in Model.Categories)
+            {
+                if (c.CategoryMasterName == "Jobs")
+                {
+
+                    var newUrl = "/View/" + c.CategoryId;
+
+            <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
+        }
+    }
 </div>
 
-<div class="col-md-2 post-card text-center">
-    <h3 class="text-center">Pets</h3>
-    <hr />
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
-</div>
 
-<div class="col-md-2 post-card text-center">
-    <h3 class="text-center">Services</h3>
-    <hr />
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
-    <div>link 1</div>
-</div>
+
+
+
+
+
+
+
+
+    <!--
+        
+    
+    <div class="col-md-2 post-card text-center">
+        <h3 class="text-center">For Sale</h3>
+        <hr />
+        <div>@Html.ActionLink("Real Estate", "/View/9", "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+    </div>
+
+    <div class="col-md-2 post-card text-center">
+        <h3 class="text-center">Pets</h3>
+        <hr />
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+    </div>
+
+    <div class="col-md-2 post-card text-center">
+        <h3 class="text-center">Services</h3>
+        <hr />
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+        <div>link 1</div>
+    </div>
+        -->

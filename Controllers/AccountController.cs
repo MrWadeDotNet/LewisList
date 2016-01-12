@@ -20,6 +20,8 @@ namespace LewisList.Controllers
 
         public AccountController()
         {
+           // var currentUser = UserManager.FindById(User.Identity.GetUserId());
+
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
