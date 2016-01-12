@@ -1,0 +1,23 @@
+﻿@model LewisList.ViewModels.PostViewModel
+@{
+    ViewBag.Title = "Browse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+@foreach (var p in Model.Posts)
+{
+    var newUrl = "/Post/View/" + p.Category;
+
+    var dateParse = @p.CreatedOn;
+    var newdate = dateParse.ToString();
+
+    <div class="row">
+
+        <div class="col-md-1"><a class="no-text-decor" href="/Post/View/@p.Category">@p.Price</a></div>
+        <div class="col-md-5"><a class="no-text-decor" href="/Post/View/@p.Category">@p.Subject</a></div>
+        <div class="col-md-5"><a class="no-text-decor" href="/Post/View/@p.Category">@newdate</a></div>
+        
+    </div>
+}
+
+    </div>

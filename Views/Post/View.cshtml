@@ -7,14 +7,33 @@
 @foreach (var c in Model.Categories)
 {
     <h2>@c.CategoryName</h2>
+    <hr />
 }
 
 
 
    @foreach (var m in Model.Posts)
    {
-    <div>@m.Author </div>
-    <div>@m.Description</div>
-    <div>@m.Category</div>
-    
+    <div class="row">
+        <div class="col-md-3">
+            <h1>($@m.Price) @m.Subject</h1>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-3">
+            <h5><p>@m.Description</p></h5>
+        </div>
+   </div>
+    <hr />
+    <div><h5>Contact Information</h5></div>
+    <div><h5>@m.Telephone</h5></div>
+    <div><h5>@m.Author</h5></div>
+    <hr />
+    <br />
+    <div>Created on @m.CreatedOn</div>
+    <br />
+    <div>@Html.ActionLink("Go Back","/View", "Post")</div>
+
+
    }

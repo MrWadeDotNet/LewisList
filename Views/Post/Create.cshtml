@@ -27,12 +27,12 @@
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label">Category</label>
                                         <div class="col-sm-8">
-                                           
                                             @Html.DropDownList("categoryId", new SelectList(ViewBag.ProjectData, "CategoryId", "CategoryName"))
                                             @Html.ValidationMessageFor(model => model.Post.Category)
 
                                         </div>
                                     </div>
+
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label">Subject</label>
                                         <div class="col-sm-8">
@@ -43,9 +43,18 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label class="col-sm-4 control-label">Price $</label>
+                                        <div class="col-sm-8">
+
+                                            @Html.TextBoxFor(p => p.Post.Price, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Post.Price)
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label class="col-sm-4 control-label">Description</label>
                                         <div class="col-sm-8">
-                                            @Html.TextAreaFor(p => p.Post.Description, new { @rows = 8, @class = "form-control" })
+                                            @Html.TextAreaFor(p => p.Post.Description, new { @rows = 8, @cols = 20, @class = "form-control" })
                                             @Html.ValidationMessageFor(model => model.Post.Description)
                                         </div>
                                     </div>

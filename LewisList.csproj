@@ -957,6 +957,7 @@
     <Content Include="Views\Shared\_LogoutPartial.cshtml" />
     <Content Include="Views\Post\RealEstate.cshtml" />
     <Content Include="Views\Post\View.cshtml" />
+    <Content Include="Views\Post\Browse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

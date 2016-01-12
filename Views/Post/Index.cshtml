@@ -14,7 +14,7 @@
                 if (c.CategoryMasterName == "For Sale")
                 {
           
-                        var newUrl = "/View/" + c.CategoryId; 
+                        var newUrl = "/Browse/" + c.CategoryId; 
 
                         <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
                                 }
@@ -27,7 +27,7 @@
                 if (c.CategoryMasterName == "Pets")
                 {
 
-                    var newUrl = "/View/" + c.CategoryId;
+                    var newUrl = "/Browse/" + c.CategoryId;
 
                     <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
                 }
@@ -40,7 +40,7 @@
                     if (c.CategoryMasterName == "Services")
                     {
 
-                        var newUrl = "/View/" + c.CategoryId;
+                        var newUrl = "/Browse/" + c.CategoryId;
 
                 <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
             }
@@ -53,7 +53,7 @@
                 if (c.CategoryMasterName == "Jobs")
                 {
 
-                    var newUrl = "/View/" + c.CategoryId;
+                    var newUrl = "/Browse/" + c.CategoryId;
 
             <div>@Html.ActionLink(c.CategoryName, newUrl, "Post", htmlAttributes: new { @class = "no-text-decor" })</div>
         }

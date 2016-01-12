@@ -35,6 +35,15 @@ namespace LewisList.Controllers
 
             return View(vm);
         }
+        public ActionResult Browse (int? Id = 0)
+        {
+
+            PostViewModel vm = new PostViewModel();
+                        
+            vm.Posts = dbContext.Posts.Where(p => p.Category == Id);
+
+           return View(vm);
+        }
 
         public ActionResult View(int? Id = 0)
         {
@@ -93,6 +102,7 @@ namespace LewisList.Controllers
                 newPost.Category = categoryId;
                 newPost.PostalCode = userPostalCode;
                 newPost.Telephone = userTelephone;
+                newPost.Price = viewModel.Post.Price;
                 newPost.Author = username;
 
                 dbContext.Posts.Add(newPost);
