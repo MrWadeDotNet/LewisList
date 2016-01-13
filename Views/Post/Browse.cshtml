@@ -6,16 +6,18 @@
 <div class="container">
 @foreach (var p in Model.Posts)
 {
-    var newUrl = "/Post/View/" + p.Category;
+    var newUrl = "/Post/View/" + p.PostId;
 
     var dateParse = @p.CreatedOn;
     var newdate = dateParse.ToString();
 
     <div class="row">
 
-        <div class="col-md-1"><a class="no-text-decor" href="/Post/View/@p.Category">@p.Price</a></div>
-        <div class="col-md-5"><a class="no-text-decor" href="/Post/View/@p.Category">@p.Subject</a></div>
-        <div class="col-md-5"><a class="no-text-decor" href="/Post/View/@p.Category">@newdate</a></div>
+        <div class="col-md-1">$
+        <a class="no-text-decor" href="/Post/View/@p.PostId">@p.Price</a>
+        </div>
+        <a class="no-text-decor" href="/Post/View/@p.PostId"><div class="col-md-5"> @p.Subject</div></a>
+        <div class="col-md-5"><a class="no-text-decor" href="/Post/View/@p.PostId">@newdate</a></div>
         
     </div>
 }

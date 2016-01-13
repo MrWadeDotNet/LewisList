@@ -56,7 +56,7 @@ namespace LewisList.Controllers
                 PostViewModel vm = new PostViewModel();
                 int? pageId = Id;
 
-                vm.Posts = dbContext.Posts.Where(p => p.Category == pageId);
+                vm.Posts = dbContext.Posts.Where(p => p.PostId == pageId);
                 vm.Categories = dbContext.Categories.Where(c => c.CategoryId == pageId).ToList();
 
                return View(vm);

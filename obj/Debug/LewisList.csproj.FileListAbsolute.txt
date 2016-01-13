@@ -70,3 +70,4 @@ C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Deb
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.csproj.GenerateResource.Cache
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.dll
 C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.pdb
+C:\Users\Lewis\Google Drive\NSS\CSharp\FinalCapStone\LewisList\LewisList\obj\Debug\LewisList.csprojResolveAssemblyReference.cache
